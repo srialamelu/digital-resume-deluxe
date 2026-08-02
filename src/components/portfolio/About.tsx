@@ -30,7 +30,7 @@ export function About() {
             stakeholders across time zones informed well before issues become costly.
           </p>
           <p className="text-foreground/90">
-            I am currently open to Business Analyst and Data Analyst opportunities, available to
+            I am currently open to Business Analyst opportunities, available to
             relocate and able to join immediately.
           </p>
         </div>
@@ -40,7 +40,7 @@ export function About() {
           <div className="mt-6 space-y-6">
             {skills.map((s) => (
               <div key={s.group}>
-                <p className="text-xs tracking-[0.18em] text-gold uppercase">{s.group}</p>
+                <p className="text-xs font-semibold tracking-[0.18em] text-gold uppercase">{s.group}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {s.items.map((i) => (
                     <span
