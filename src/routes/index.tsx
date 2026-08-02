@@ -1,24 +1,52 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/portfolio/Nav";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Experience } from "@/components/portfolio/Experience";
+import { Education } from "@/components/portfolio/Education";
+import { Publications, Certifications } from "@/components/portfolio/Publications";
+import { Contact } from "@/components/portfolio/Contact";
+import { profile } from "@/data/profile";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Srialamelumangai Mathivanan — Business Analyst";
+const description =
+  "Business Analyst with 6+ years across aerospace and retail analytics in the UK, US, Europe and India. Power BI, SQL, SAP, Spotfire and Smartsheet.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "profile" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Education />
+        <Publications />
+        <Certifications />
+        <Contact />
+      </main>
+      <footer className="border-t border-border/60 py-10">
+        <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-2 px-6 text-center text-xs text-muted-foreground">
+          <p>
+            © {new Date().getFullYear()} {profile.name}
+          </p>
+          <p>{profile.title} · Thanjavur, India</p>
+        </div>
+      </footer>
     </div>
   );
 }
