@@ -13,6 +13,8 @@ const isStatic = process.env["STATIC_BUILD"] === "true";
 
 export default defineConfig({
   vite: { base },
+  // GitHub Pages is static hosting: skip the Cloudflare/nitro server bundle.
+  ...(isStatic ? { nitro: false as const } : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this. Skipped for the static build, where the
