@@ -19,10 +19,12 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this. Skipped for the static build, where the
     // prerenderer boots its own preview server.
-    ...(isStatic ? {} : { server: { entry: "server" } }),
-    // Prerender every page to static HTML so the site can be hosted on
-    // GitHub Pages (static-only) as well as on the Lovable server runtime.
-    prerender: { enabled: true, crawlLinks: true },
-    pages: [{ path: "/", prerender: { enabled: true } }],
+    ...(isStatic
+      ? {
+          // Prerender every page to static HTML for GitHub Pages hosting.
+          prerender: { enabled: true, crawlLinks: true },
+          pages: [{ path: "/", prerender: { enabled: true } }],
+        }
+      : { server: { entry: "server" } }),
   },
 });
