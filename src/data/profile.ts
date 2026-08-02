@@ -6,7 +6,6 @@ export const profile = {
     "Turning fragmented data into dashboards leaders trust and decisions that move faster.",
   location: "Thanjavur, India · Open to Relocation · Immediate Joiner",
   email: "sam.mathi95@gmail.com",
-  phone: "+91 7845786535",
   linkedin: "https://www.linkedin.com/in/srialamelumangai",
   formspree: "https://formspree.io/f/xrenwjkw",
 };
