@@ -88,20 +88,20 @@ export function Contact() {
         </div>
       </div>
 
-      <div className="bg-primary py-20 text-primary-foreground sm:py-24">
+      <div className="footer-surface border-t border-border/70 py-20 text-foreground sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-6">
-          <p className="text-xs font-semibold tracking-[0.22em] text-gold-soft uppercase">Contact</p>
+          <p className="eyebrow">Contact</p>
           <h2 className="font-display mt-5 max-w-3xl text-3xl leading-tight sm:text-4xl">
             Hiring for a Business Analyst, Analyst or Team Lead role? Let's talk.
           </h2>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/80">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
             Available immediately and open to relocation. Happy to walk through dashboards, KPI
             frameworks and delivery metrics from any of the programmes above.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
             >
               <Mail className="size-4" /> {profile.email}
             </a>
@@ -109,13 +109,14 @@ export function Contact() {
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/40 px-6 py-3 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
+              className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-card/60 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/60"
             >
               <Linkedin className="size-4" /> LinkedIn
             </a>
           </div>
         </div>
       </div>
+
     </section>
   );
 }

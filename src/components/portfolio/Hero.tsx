@@ -1,6 +1,6 @@
 import { Mail, MapPin, Linkedin } from "lucide-react";
 import { profile, stats } from "@/data/profile";
-import portrait from "@/assets/sri-portrait.jpg.asset.json";
+import portrait from "@/assets/sri-portrait-2.jpg.asset.json";
 
 export function Hero() {
   return (

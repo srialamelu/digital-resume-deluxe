@@ -39,7 +39,7 @@ function Index() {
         <Certifications />
         <Contact />
       </main>
-      <footer className="border-t border-border/60 py-10">
+      <footer className="footer-surface border-t border-border/70 py-10">
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-2 px-6 text-center text-xs text-muted-foreground">
           <p>
             © {new Date().getFullYear()} {profile.name}
