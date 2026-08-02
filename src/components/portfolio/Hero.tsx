@@ -1,6 +1,6 @@
 import { Mail, MapPin, Linkedin } from "lucide-react";
 import { profile, stats } from "@/data/profile";
-import portrait from "@/assets/sri-portrait-2.jpg.asset.json";
+import portrait from "@/assets/sri-portrait.jpg";
 
 export function Hero() {
   return (
@@ -55,7 +55,7 @@ export function Hero() {
         <div className="relative mx-auto w-full max-w-xs lg:max-w-sm">
           <div className="surface-card overflow-hidden rounded-2xl p-2">
             <img
-              src={portrait.url}
+              src={portrait}
               alt="Portrait of Srialamelumangai Mathivanan, Business Analyst"
               className="h-auto w-full rounded-xl object-cover"
               loading="eager"
