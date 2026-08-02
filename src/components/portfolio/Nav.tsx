@@ -28,7 +28,7 @@ export function Nav() {
     >
       <nav className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
         <a href="#top" className="font-display text-lg tracking-tight">
-          <span className="text-gradient-gold">S</span>
+          <span className="text-primary">S</span>
           <span className="text-foreground">. Mathivanan</span>
         </a>
         <div className="hidden items-center gap-7 md:flex">
@@ -46,7 +46,7 @@ export function Nav() {
           href={profile.linkedin}
           target="_blank"
           rel="noreferrer noopener"
-          className="rounded-full border border-gold/40 px-4 py-1.5 text-xs tracking-wide text-gold transition-colors hover:bg-gold/10"
+          className="rounded-full border border-primary/30 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary transition-colors hover:bg-primary/5"
         >
           LinkedIn
         </a>
